@@ -1,3 +1,4 @@
+import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Features from "@/components/Features";
@@ -5,12 +6,15 @@ import CTA from "@/components/CTA";
 
 const Index = () => {
   return (
-    <main className="min-h-screen">
-      <Hero />
-      <About />
-      <Features />
-      <CTA />
-    </main>
+    <div className="min-h-screen">
+      <Navigation />
+      <main>
+        <Hero />
+        <About />
+        <Features />
+        <CTA />
+      </main>
+    </div>
   );
 };
 

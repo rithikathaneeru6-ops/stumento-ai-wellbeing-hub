@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const CTA = () => {
   return (
@@ -10,13 +11,26 @@ const CTA = () => {
         <p className="text-lg md:text-xl mb-8 font-inter opacity-90 max-w-3xl mx-auto">
           Join educators and institutions who trust Stumento to empower their students' mental well-being.
         </p>
-        <Button 
-          variant="secondary" 
-          size="lg"
-          className="text-lg px-8 py-3 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-elevated"
-        >
-          Get Started
-        </Button>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link to="/signup">
+            <Button 
+              variant="secondary" 
+              size="lg"
+              className="text-lg px-8 py-3 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-elevated"
+            >
+              Get Started Free
+            </Button>
+          </Link>
+          <Link to="/dashboard">
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="text-lg px-8 py-3 font-semibold transition-all duration-300 hover:scale-105 border-white text-white hover:bg-white hover:text-primary"
+            >
+              View Demo
+            </Button>
+          </Link>
+        </div>
       </div>
     </section>
   );
